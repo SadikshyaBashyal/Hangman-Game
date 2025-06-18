@@ -1,2 +1,124 @@
-# Hangman-Game
-This is the repository for learning the language and making a hang-man game
+# Hangman Game - Modular Python Implementation
+
+A fully functional Hangman game built with Pygame, organized into 4 modular files for better code organization and maintainability.
+
+## 🎮 Features
+
+- **Full Screen Mode**: Runs in fullscreen for immersive gameplay
+- **Dynamic Animations**: Animated stars and clouds in the background
+- **Dual Input**: Play with mouse clicks or keyboard typing
+- **Visual Feedback**: Color-coded messages and button states
+- **Game State Management**: Proper win/lose detection and game reset
+- **Modular Architecture**: Clean separation of concerns
+
+## 📁 File Structure
+
+### 1. `constants.py`
+**Purpose**: Contains all game constants and configuration
+- Color definitions
+- Game word list
+- Game settings (max mistakes, message display time)
+
+### 2. `ui_components.py`
+**Purpose**: All UI elements and rendering functions
+- `FontManager`: Manages all game fonts
+- `HangmanRenderer`: Draws the hangman figure
+- `Button`: Individual clickable letter buttons
+- `ButtonManager`: Manages all A-Z letter buttons
+- `BackgroundRenderer`: Animated background (stars, clouds, moon)
+- `GameRenderer`: Main rendering coordinator
+
+### 3. `game_logic.py`
+**Purpose**: Core game mechanics and state management
+- `GameLogic`: Handles word selection, letter guessing, win/lose conditions
+- `InputHandler`: Processes keyboard and mouse input events
+
+### 4. `main.py`
+**Purpose**: Main game coordinator and entry point
+- `Game`: Main game class that coordinates all components
+- Initializes Pygame and all game components
+- Runs the main game loop
+
+## 🚀 How to Run
+
+1. **Install Dependencies**:
+   ```bash
+   pip install pygame
+   ```
+
+2. **Run the Game**:
+   ```bash
+   python main.py
+   ```
+
+3. **Testing All Components Together**:
+   If you want to test all components in a single file, see `test.py` in the `Testing_phase` directory:
+   ```bash
+   python Testing_phase/test.py
+   ```
+
+## 🎯 How to Play
+
+- **Mouse**: Click letter buttons to guess
+- **Keyboard**: Type any letter (A-Z) to guess
+- **Controls**:
+  - `SPACE`: Restart game (when won/lost)
+  - `ESC`: Exit game
+  - `X` button: Close window
+
+## 🏗️ Architecture Benefits
+
+### **Modularity**
+- Each file has a single responsibility
+- Easy to modify individual components
+- Clear separation of concerns
+
+### **Maintainability**
+- Well-documented code with docstrings
+- Consistent naming conventions
+- Logical file organization
+
+### **Extensibility**
+- Easy to add new features
+- Simple to modify game settings
+- Reusable components
+
+### **Readability**
+- Clear class and function names
+- Comprehensive comments
+- Logical code flow
+
+## 🔧 Customization
+
+### **Adding New Words**
+Edit `constants.py` and add words to the `WORDS` list.
+
+### **Changing Colors**
+Modify color constants in `constants.py`.
+
+### **Adjusting Game Settings**
+Change `MAX_MISTAKES` or `MESSAGE_DISPLAY_TIME` in `constants.py`.
+
+### **Modifying Animations**
+Edit the `BackgroundRenderer.draw_decorations()` method in `ui_components.py`.
+
+## 🎨 Visual Features
+
+- **Animated Background**: Moving stars and clouds
+- **Dynamic Hangman**: Progressive body part drawing
+- **Interactive Buttons**: Hover effects and state changes
+- **Color-coded Feedback**: Green for correct, red for wrong
+- **Smooth Animations**: 60 FPS gameplay
+
+## 📝 Code Quality
+
+- **Documentation**: Comprehensive docstrings for all classes and methods
+- **Comments**: Inline comments explaining complex logic
+- **Type Hints**: Clear parameter and return type documentation
+- **Error Handling**: Robust input validation and state management
+
+## 🧪 Testing
+
+For testing all components together in a single file, use the `test.py` file located in the `Testing_phase` directory. This file contains all the modular components combined into one file for easier testing and debugging.
+
+This modular structure makes the code easy to understand, maintain, and extend while providing a complete, feature-rich Hangman game experience. 
