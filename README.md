@@ -2,9 +2,17 @@
 
 A fully functional Hangman game built with Pygame, organized into 4 modular files for better code organization and maintainability.
 
-## 📸 Screenshot
+## 📸 Screenshots
 
-![Hangman Game Screenshot](Screenshot-Feature/screenshots/hangman_game_screenshot_20250618_110145.png)
+### Python Desktop Version
+![Hangman Game - Python Desktop Version](Screenshot-Feature/screenshots/hangman_game_screenshot_20250618_110145.png)
+*The original Python/Pygame implementation featuring full-screen mode, animated background with stars and clouds, and the complete modular architecture.*
+
+### Web Browser Version
+![Hangman Game - Web Browser Version](image.png)
+*The web-optimized version running in browsers, featuring responsive design and cross-platform compatibility.*
+
+**Live Demo**: [Play the game online](https://sadikshyabashyal.github.io/Hangman-Game/)
 
 ## 🎮 Features
 
@@ -141,4 +149,41 @@ The screenshot feature is implemented in the main game loop and allows players t
 To use the screenshot feature:
 1. Run the game normally
 2. During gameplay, press `F12` to capture a screenshot
-3. Check the `screenshots` folder for your captured images 
+3. Check the `screenshots` folder for your captured images
+
+## 💭 Discussion
+
+### **Desktop vs Web Implementation**
+
+The Hangman game has been successfully implemented in two different environments, each with its own advantages:
+
+**Python Desktop Version:**
+- **Full-screen immersive experience** with animated backgrounds
+- **High-performance graphics** using Pygame's optimized rendering
+- **Modular architecture** for easy maintenance and extension
+- **Rich visual effects** including dynamic animations and smooth transitions
+- **Native system integration** with keyboard and mouse input
+
+**Web Browser Version:**
+- **Cross-platform accessibility** - runs on any device with a web browser
+- **No installation required** - instant play capability
+- **Responsive design** that adapts to different screen sizes
+- **Easy sharing** via simple URL links
+- **Modern web technologies** using HTML5 Canvas and JavaScript
+
+### **Technical Comparison**
+
+| Feature | Python Desktop | Web Browser |
+|---------|----------------|-------------|
+| **Performance** | High (native) | Good (WebAssembly) |
+| **Graphics** | Full-screen, animated | Responsive, optimized |
+| **Input** | Keyboard + Mouse | Keyboard + Mouse + Touch |
+| **Deployment** | Local installation | Cloud-hosted |
+| **Updates** | Manual download | Automatic |
+| **Platform** | Windows/Mac/Linux | Any browser |
+
+### **Development Approach**
+
+The modular design of the Python version made it relatively straightforward to create a web equivalent. The core game logic was preserved while adapting the rendering system to work with HTML5 Canvas. This demonstrates the value of clean architecture and separation of concerns in software development.
+
+Both versions maintain the same engaging gameplay experience while leveraging the strengths of their respective platforms. 
