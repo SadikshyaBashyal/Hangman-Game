@@ -2,6 +2,10 @@
 
 A fully functional Hangman game built with Pygame, organized into 4 modular files for better code organization and maintainability.
 
+## 📸 Screenshot
+
+![Hangman Game Screenshot](Screenshot-Feature/screenshots/hangman_game_screenshot_20250618_110145.png)
+
 ## 🎮 Features
 
 - **Full Screen Mode**: Runs in fullscreen for immersive gameplay
@@ -121,4 +125,20 @@ Edit the `BackgroundRenderer.draw_decorations()` method in `ui_components.py`.
 
 For testing all components together in a single file, use the `test.py` file located in the `Testing_phase` directory. This file contains all the modular components combined into one file for easier testing and debugging.
 
-This modular structure makes the code easy to understand, maintain, and extend while providing a complete, feature-rich Hangman game experience. 
+This modular structure makes the code easy to understand, maintain, and extend while providing a complete, feature-rich Hangman game experience.
+
+## 📸 Screenshot Feature
+
+The `Screenshot-Feature` directory contains the same modular Hangman game code but with an additional screenshot functionality. This version includes:
+
+- **Built-in Screenshot Capture**: Press `F12` during gameplay to capture a screenshot
+- **Automatic Screenshot Directory**: Screenshots are automatically saved to a `screenshots` folder
+- **Timestamped Filenames**: Each screenshot is saved with a unique timestamp
+- **Same Core Gameplay**: All original features and functionality remain unchanged
+
+The screenshot feature is implemented in the main game loop and allows players to capture memorable moments or document their gameplay. Screenshots are saved in PNG format and can be used for documentation, sharing, or creating tutorials.
+
+To use the screenshot feature:
+1. Run the game normally
+2. During gameplay, press `F12` to capture a screenshot
+3. Check the `screenshots` folder for your captured images 
