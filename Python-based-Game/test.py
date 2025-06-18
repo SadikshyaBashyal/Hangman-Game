@@ -113,11 +113,11 @@ class Button:
 # Game Class
 class HangmanGame:
     def __init__(self) -> None:
+        self.buttons = []
+        self.create_buttons()
         self.reset_game()
         self.message = ""
         self.message_timer = 0
-        self.buttons = []
-        self.create_buttons()
 
     def reset_game(self):
         self.word = random.choice(WORDS)
@@ -125,6 +125,13 @@ class HangmanGame:
         self.mistakes = 0
         self.game_state = "playing"
         self.message = ""
+        self.message_timer = 0
+        
+        # Reset all buttons to initial state
+        for button in self.buttons:
+            button.visible = True
+            button.clicked = False
+            button.color = BUTTON_COLOR
 
     def create_buttons(self):
         self.buttons = []
