@@ -168,28 +168,33 @@ class BackgroundRenderer:
         
         # Draw gently moving stars
         for i in range(100):
-            random.seed(i)
-            base_x = random.randint(0, width)
-            base_y = random.randint(0, height)
+            
+            # Use hash-based deterministic positioning
+            base_x = hash(f"star_x_{i}") % width
+            base_y = hash(f"star_y_{i}") % height
             
             x = base_x + int(10 * math.sin(current_time * 3.0 + i * 0.1))
             y = base_y + int(5 * math.cos(current_time * 2.5 + i * 0.05))
             
-            size = random.randint(1, 3)
-            brightness = random.randint(150, 255)
+            # Use hash-based deterministic values for star properties
+            size = 1 + (hash(f"star_size_{i}") % 3)  # Size between 1-3
+            brightness = 150 + (hash(f"star_brightness_{i}") % 106)  # Brightness between 150-255
             pygame.draw.circle(surface, (brightness, brightness, brightness), (x, y), size)
 
         # Draw moon
         pygame.draw.circle(surface, (255, 255, 255), (width - 100, 100), 50)
 
         # Draw gently moving clouds
+        
         cloud_positions = [(width - 300, 80), (width - 600, 120), (width - 900, 90)]
         for i, (base_x, base_y) in enumerate(cloud_positions):
+            # Use deterministic positioning without affecting global random state
             x = base_x + int(20 * math.sin(current_time * 1.8 + i * 0.5))
             y = base_y + int(5 * math.sin(current_time * 1.5 + i * 0.3))
             
-            size = random.randint(30, 60)
-            brightness = random.randint(150, 255)
+            # Use hash-based deterministic values for cloud properties
+            size = 30 + (hash(f"cloud_{i}") % 31)  # Size between 30-60
+            brightness = 150 + (hash(f"brightness_{i}") % 106)  # Brightness between 150-255
             pygame.draw.ellipse(surface, (brightness, brightness, brightness), (x, y, size, size * 0.8))
 
         # Draw border
