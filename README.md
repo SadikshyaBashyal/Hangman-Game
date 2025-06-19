@@ -187,3 +187,13 @@ The Hangman game has been successfully implemented in two different environments
 The modular design of the Python version made it relatively straightforward to create a web equivalent. The core game logic was preserved while adapting the rendering system to work with HTML5 Canvas. This demonstrates the value of clean architecture and separation of concerns in software development.
 
 Both versions maintain the same engaging gameplay experience while leveraging the strengths of their respective platforms. 
+
+### Coded with AI
+AI has helped me to code in python and create this Hangman game using Pygame. The AI assistance was invaluable in:
+
+- **Converting to Modular Programming**: Breaking down the monolithic code into well-organized modules (`constants.py`, `ui_components.py`, `game_logic.py`, `main.py`) for better maintainability and code reusability
+- **Pygame Implementation**: Implementing the game mechanics, graphics rendering, and user interface using Pygame library with proper event handling and animation systems
+- **Comprehensive Documentation**: Creating detailed docstrings, inline comments, and this comprehensive README that explains the architecture, features, and usage instructions
+- **Web Development**: Converting the Python game to a web-based version using HTML5, CSS3, and JavaScript for cross-platform accessibility and easy deployment
+
+The AI's guidance helped transform a simple game concept into a professional, well-structured project with both desktop and web implementations, demonstrating modern software development practices and clean code architecture. 
